@@ -1,0 +1,11 @@
+{
+  "name": "todo-list-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hansderly/todo-list-webpack.git",
+  "author": "Hans-Derly Rameau <rameauhansderly@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "hint": "7.x"
+  }
+}
