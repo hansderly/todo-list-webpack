@@ -115,7 +115,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/styles.css */ \"./src/assets/styles/styles.css\");\n\n\n\n//# sourceURL=webpack://todo-list-webpack/./src/assets/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadTodo\": () => (/* reexport safe */ _todo_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n/* harmony export */ });\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/styles.css */ \"./src/assets/styles/styles.css\");\n/* harmony import */ var _todo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo.js */ \"./src/assets/scripts/todo.js\");\n\n\n\n\n\n//# sourceURL=webpack://todo-list-webpack/./src/assets/scripts/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/scripts/todo.js":
+/*!************************************!*\
+  !*** ./src/assets/scripts/todo.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst todolist = [\n  {\n    id: 0,\n    description: 'Do some data structures and algorithms',\n    completed: true,\n  },\n  {\n    id: 1,\n    description: 'Go take a walk',\n    completed: true,\n  },\n  {\n    id: 2,\n    description: 'Play some video game',\n    completed: true,\n  },\n];\n\nconst todolistContainer = document.querySelector('.todolist');\n\nconst displayTodo = () => {\n  todolist.forEach((el, index) => {\n    const todo = document.createElement('li');\n    todo.id = index;\n    todo.innerHTML = `\n            <div>\n              <input type=\"checkbox\" name=\"checkbox\" id=\"checkbox\">\n              <p> Do some Data Structure and Algorithms</p>\n            </div>\n            <span class=\"material-symbols-outlined\"> more_vert </span> `;\n\n    todolistContainer.appendChild(todo);\n  });\n};\ndisplayTodo();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayTodo);\n\n//# sourceURL=webpack://todo-list-webpack/./src/assets/scripts/todo.js?");
 
 /***/ })
 
