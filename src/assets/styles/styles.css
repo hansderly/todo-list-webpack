@@ -9,9 +9,9 @@
   max-width: 500px;
   margin-inline: auto;
   margin-top: 50px;
-  box-shadow: 0px 11px 75px -3px rgba(0,0,0,0.63);
-  -webkit-box-shadow: 0px 11px 75px -3px rgba(0,0,0,0.63);
-  -moz-box-shadow: 0px 11px 75px -3px rgba(0,0,0,0.63); 
+  box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.63);
 }
 
 .todo_header {
@@ -58,7 +58,7 @@
 
 .todolist > li > div > p {
   margin-left: 15px;
-} 
+}
 
 .clear_btn {
   padding: 30px;
