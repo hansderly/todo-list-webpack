@@ -1,3 +1,40 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;&display=swap');
+
+* {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-top: 50px;
+  box-shadow: 0px 11px 75px -3px rgba(0,0,0,0.63);
+  -webkit-box-shadow: 0px 11px 75px -3px rgba(0,0,0,0.63);
+  -moz-box-shadow: 0px 11px 75px -3px rgba(0,0,0,0.63); 
+}
+
+.todo_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 15px;
+}
+
+.todo_form {
+  position: relative;
+  padding: 15px 15px;
+}
+
+.todo {
+  width: 100%;
+  border: none;
+  padding: 15px 0;
+  outline: 0;
+  font-style: italic;
+}
+
+.icon_enter {
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }
