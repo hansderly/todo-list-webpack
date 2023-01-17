@@ -1,0 +1,19 @@
+{
+  "name": "todo-list-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hansderly/todo-list-webpack.git",
+  "author": "Hans-Derly Rameau <rameauhansderly@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "10.x",
+    "eslint": "7.x",
+    "eslint-config-airbnb-base": "14.x",
+    "eslint-plugin-import": "2.x",
+    "hint": "7.x",
+    "stylelint": "13.x",
+    "stylelint-config-standard": "21.x",
+    "stylelint-csstree-validator": "1.x",
+    "stylelint-scss": "3.x"
+  }
+}
