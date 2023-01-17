@@ -17,12 +17,13 @@
 .todo_header {
   display: flex;
   justify-content: space-between;
-  padding: 25px 15px;
+  align-items: center;
+  padding: 15px 15px;
 }
 
 .todo_form {
   position: relative;
-  padding: 15px 15px;
+  padding: 5px 15px;
 }
 
 .todo {
@@ -35,6 +36,35 @@
 
 .icon_enter {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 15px;
+}
+
+.todolist {
+  padding: 0;
+}
+
+.todolist > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  border-bottom: 1px solid gray;
+}
+
+.todolist > li > div {
+  display: flex;
+}
+
+.todolist > li > div > p {
+  margin-left: 15px;
+} 
+
+.clear_btn {
+  padding: 30px;
+  width: 100%;
+  font-size: 15px;
+  color: gray;
+  outline: 0;
+  border: 0;
 }
