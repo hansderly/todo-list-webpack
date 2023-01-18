@@ -19,6 +19,17 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
+const editTodo = (target) => {
+  const { id } = target.parentElement.parentElement;
+  target.addEventListener('focusout', () => {
+    const newDesc = target.value;
+    todos.forEach((todo) => {
+      if (Number(todo.id) === +id) todo.description = newDesc;
+    });
+    Todo.saveTolocalStorage();
+  });
+};
+
 const removeTodo = (id) => {
   Todo.remove(id);
   Todo.saveTolocalStorage();
@@ -27,9 +38,7 @@ const removeTodo = (id) => {
 
 todolist.addEventListener('click', (e) => {
   const { target } = e;
-  if (target.type === 'text') {
-    return;
-  }
+  if (target.type === 'text') editTodo(target);
 
   if (target.type === 'submit') {
     const { id } = target.parentElement;
