@@ -38,7 +38,4 @@ todolist.addEventListener('click', (e) => {
 });
 
 export default todolist;
-export {
-  addTodo,
-  removeTodo,
-};
+export { addTodo, removeTodo };
