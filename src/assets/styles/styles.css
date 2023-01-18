@@ -5,6 +5,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.hide {
+  display: none !important;
+}
+
 .container {
   max-width: 500px;
   margin-inline: auto;
@@ -62,6 +66,12 @@
   border: 0;
   width: 240px;
   margin-left: 15px;
+}
+
+.todolist > li > button {
+  background: none;
+  border: 0;
+  outline: 0;
 }
 
 .clear_btn {

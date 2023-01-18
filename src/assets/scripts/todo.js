@@ -1,21 +1,30 @@
-class Todo {
-  static todos = [];
+import data from './storage.js';
 
-  constructor() {
-    this.id = null;
-    this.description = null;
+// eslint-disable-next-line import/no-mutable-exports
+let todos = JSON.parse(data) || [];
+class Todo {
+  constructor(id, description) {
+    this.id = id;
+    this.description = description;
     this.completed = false;
   }
 
-  add(id, description) {
-    this.id = id;
-    this.description = description;
-    Todo.todos.push(this);
+  add() {
+    const { id, description, completed } = this;
+    const newTodo = { id, description, completed };
+    todos.push(newTodo);
   }
 
-  remove(id) {
-    this.todos = this.todos.filter((todo) => todo.id !== id);
+  static remove(id) {
+    console.log("🚀 ~ file: todo.js:19 ~ Todo ~ remove ~ id", id)
+    todos = todos.filter((todo) => Number(todo.id) !== +id);
+  }
+
+  static saveTolocalStorage() {
+    localStorage.setItem('todos', JSON.stringify(todos));
   }
 }
 
+
 export default Todo;
+export { todos };
