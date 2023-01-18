@@ -19,13 +19,16 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
+const updateIndex = () => {
+  todos.forEach((todo, index) => { todo.id = index; });
+  Todo.saveTolocalStorage();
+};
+
 const editTodo = (target) => {
   const { id } = target.parentElement.parentElement;
   target.addEventListener('focusout', () => {
     const newDesc = target.value;
-    todos.forEach((todo) => {
-      if (Number(todo.id) === +id) todo.description = newDesc;
-    });
+    todos.forEach((todo) => { if (Number(todo.id) === +id) todo.description = newDesc; });
     Todo.saveTolocalStorage();
   });
 };
@@ -34,6 +37,7 @@ const removeTodo = (id) => {
   Todo.remove(id);
   Todo.saveTolocalStorage();
   loadTodo();
+  updateIndex();
 };
 
 todolist.addEventListener('click', (e) => {
