@@ -27,6 +27,7 @@ const updateIndex = () => {
 const editTodo = (target) => {
   const { id } = target.parentElement.parentElement;
   target.addEventListener('focusout', () => {
+    target.parentElement.parentElement.classList.remove('yellow_color');
     const newDesc = target.value;
     todos.forEach((todo) => { if (Number(todo.id) === +id) todo.description = newDesc; });
     Todo.saveTolocalStorage();
@@ -42,7 +43,10 @@ const removeTodo = (id) => {
 
 todolist.addEventListener('click', (e) => {
   const { target } = e;
-  if (target.type === 'text') editTodo(target);
+  if (target.type === 'text') {
+    editTodo(target);
+    target.parentElement.parentElement.classList.add('yellow_color');
+  }
 
   if (target.type === 'submit') {
     const { id } = target.parentElement;

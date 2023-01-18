@@ -66,12 +66,17 @@
   border: 0;
   width: 240px;
   margin-left: 15px;
+  background-color: transparent;
 }
 
 .todolist > li > button {
   background: none;
   border: 0;
   outline: 0;
+}
+
+.yellow_color {
+  background-color: rgba(253, 253, 172, 0.837);
 }
 
 .clear_btn {
