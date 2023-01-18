@@ -33,9 +33,12 @@ todolist.addEventListener('click', (e) => {
 
   if (target.type === 'submit') {
     const { id } = target.parentElement;
-    console.log("🚀 ~ file: todo_functionalities.js:36 ~ todolist.addEventListener ~ id", id)
     removeTodo(id);
   }
 });
 
-export { todolist }
+export default todolist;
+export {
+  addTodo,
+  removeTodo,
+};

@@ -16,7 +16,6 @@ class Todo {
   }
 
   static remove(id) {
-    console.log("🚀 ~ file: todo.js:19 ~ Todo ~ remove ~ id", id)
     todos = todos.filter((todo) => Number(todo.id) !== +id);
   }
 
@@ -24,7 +23,6 @@ class Todo {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 }
-
 
 export default Todo;
 export { todos };
