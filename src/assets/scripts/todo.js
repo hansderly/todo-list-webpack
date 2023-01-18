@@ -1,36 +1,28 @@
-const todolist = [
-  {
-    id: 0,
-    description: 'Do some data structures and algorithms',
-    completed: true,
-  },
-  {
-    id: 1,
-    description: 'Go take a walk',
-    completed: true,
-  },
-  {
-    id: 2,
-    description: 'Play some video game',
-    completed: true,
-  },
-];
+import data from './storage.js';
 
-const todolistContainer = document.querySelector('.todolist');
+// eslint-disable-next-line import/no-mutable-exports
+let todos = JSON.parse(data) || [];
+class Todo {
+  constructor(id, description) {
+    this.id = id;
+    this.description = description;
+    this.completed = false;
+  }
 
-const displayTodo = () => {
-  todolist.forEach((el, index) => {
-    const todo = document.createElement('li');
-    todo.id = index;
-    todo.innerHTML = `
-            <div>
-              <input type="checkbox" name="checkbox" id="checkbox">
-              <p>${el.description}</p>
-            </div>
-            <span class="material-symbols-outlined"> more_vert </span> `;
+  add() {
+    const { id, description, completed } = this;
+    const newTodo = { id, description, completed };
+    todos.push(newTodo);
+  }
 
-    todolistContainer.appendChild(todo);
-  });
-};
+  static remove(id) {
+    todos = todos.filter((todo) => Number(todo.id) !== +id);
+  }
 
-export default displayTodo;
+  static saveTolocalStorage() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }
+}
+
+export default Todo;
+export { todos };

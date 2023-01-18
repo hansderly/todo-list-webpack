@@ -5,6 +5,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.hide {
+  display: none !important;
+}
+
 .container {
   max-width: 500px;
   margin-inline: auto;
@@ -48,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 15px;
+  padding: 5px 15px;
   border-bottom: 1px solid gray;
 }
 
@@ -56,8 +60,23 @@
   display: flex;
 }
 
-.todolist > li > div > p {
+.todolist > li > div > input[type=text] {
+  padding: 20px;
+  outline: 0;
+  border: 0;
+  width: 240px;
   margin-left: 15px;
+  background-color: transparent;
+}
+
+.todolist > li > button {
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.yellow_color {
+  background-color: rgba(253, 253, 172, 0.837);
 }
 
 .clear_btn {
