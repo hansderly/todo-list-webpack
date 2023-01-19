@@ -22,6 +22,11 @@ class Todo {
   static saveTolocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
+
+  static setTolocalStorage(newTodos) {
+    todos = newTodos;
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }
 }
 
 export default Todo;
