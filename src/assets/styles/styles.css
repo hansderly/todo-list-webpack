@@ -9,6 +9,10 @@
   display: none !important;
 }
 
+.line {
+  text-decoration: line-through;
+}
+
 .container {
   max-width: 500px;
   margin-inline: auto;

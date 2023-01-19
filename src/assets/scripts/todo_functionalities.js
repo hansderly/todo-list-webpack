@@ -1,3 +1,4 @@
+import { completedTodo, updateIndex } from './completed_functionality.js';
 import Todo, { todos } from './todo.js';
 import loadTodo from './todo_loader.js';
 
@@ -18,11 +19,6 @@ form.addEventListener('submit', (e) => {
   addTodo(id, todoDesc);
   form.reset();
 });
-
-const updateIndex = () => {
-  todos.forEach((todo, index) => { todo.id = index; });
-  Todo.saveTolocalStorage();
-};
 
 const editTodo = (target) => {
   const { id } = target.parentElement.parentElement;
@@ -52,6 +48,8 @@ todolist.addEventListener('click', (e) => {
     const { id } = target.parentElement;
     removeTodo(id);
   }
+
+  if (target.type === 'checkbox') completedTodo(target);
 });
 
 export default todolist;
