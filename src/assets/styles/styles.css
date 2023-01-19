@@ -15,6 +15,7 @@ body {
 
 .line {
   text-decoration: line-through;
+  text-decoration-color: red;
 }
 
 .container {
