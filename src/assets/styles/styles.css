@@ -5,18 +5,26 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: aliceblue;
+}
+
 .hide {
   display: none !important;
 }
 
 .line {
   text-decoration: line-through;
+  text-decoration-color: red;
 }
 
 .container {
   max-width: 500px;
   margin-inline: auto;
   margin-top: 50px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
   box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.63);
   -webkit-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.63);
@@ -24,9 +32,21 @@
 
 .todo_header {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 15px 15px;
+}
+
+.popup_message {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+  inset: 0;
 }
 
 .todo_form {
@@ -40,6 +60,7 @@
   padding: 15px 0;
   outline: 0;
   font-style: italic;
+  background-color: transparent;
 }
 
 .icon_enter {
@@ -62,13 +83,14 @@
 
 .todolist > li > div {
   display: flex;
+  flex: 1;
 }
 
 .todolist > li > div > input[type=text] {
   padding: 20px;
   outline: 0;
   border: 0;
-  width: 240px;
+  width: 90%;
   margin-left: 15px;
   background-color: transparent;
 }
