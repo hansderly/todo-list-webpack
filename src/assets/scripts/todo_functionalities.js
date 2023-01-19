@@ -4,12 +4,15 @@ import loadTodo from './todo_loader.js';
 
 const form = document.querySelector('#form');
 const todolist = document.querySelector('.todolist');
+const popupMessage = document.querySelector('.popup_message');
 
 const addTodo = (id, desc) => {
   const todo = new Todo(id, desc);
   todo.add();
   Todo.saveTolocalStorage();
   loadTodo();
+  popupMessage.classList.remove('hide');
+  setTimeout(() => popupMessage.classList.add('hide'), 3000);
 };
 
 form.addEventListener('submit', (e) => {
