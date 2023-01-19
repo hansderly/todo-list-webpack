@@ -83,13 +83,14 @@ body {
 
 .todolist > li > div {
   display: flex;
+  flex: 1;
 }
 
 .todolist > li > div > input[type=text] {
   padding: 20px;
   outline: 0;
   border: 0;
-  width: 240px;
+  width: 90%;
   margin-left: 15px;
   background-color: transparent;
 }
