@@ -6,9 +6,7 @@ const form = document.querySelector('#form');
 const todolist = document.querySelector('.todolist');
 const popupMessage = document.querySelector('.popup_message');
 
-const addTodo = (id, desc) => {
-  const todo = new Todo(id, desc);
-  todo.add();
+const addTodoHandler = (id, desc) => {
   Todo.saveTolocalStorage();
   loadTodo();
   popupMessage.classList.remove('hide');
@@ -19,7 +17,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const { value: todoDesc } = document.querySelector('#todo');
   const id = todos.length;
-  addTodo(id, todoDesc);
+  addTodoHandler(id, todoDesc);
   form.reset();
 });
 
@@ -33,7 +31,7 @@ const editTodo = (target) => {
   });
 };
 
-const removeTodo = (id) => {
+const removeTodoHandler = (id) => {
   Todo.remove(id);
   Todo.saveTolocalStorage();
   loadTodo();
@@ -49,11 +47,11 @@ todolist.addEventListener('click', (e) => {
 
   if (target.type === 'submit') {
     const { id } = target.parentElement;
-    removeTodo(id);
+    removeTodoHandler(id);
   }
 
   if (target.type === 'checkbox') completedTodo(target);
 });
 
 export default todolist;
-export { addTodo, removeTodo };
+export { addTodoHandler, removeTodoHandler };
