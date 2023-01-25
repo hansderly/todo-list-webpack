@@ -17,4 +17,8 @@ describe('when adding a todo', () => {
     const nextId = id + 1;
     expect(todos.length).toBe(nextId);
   });
+
+  it('should remove one from the length of the array', () => {
+    expect(removeTodo(id).length).toBe(todos.length);
+  });
 });
