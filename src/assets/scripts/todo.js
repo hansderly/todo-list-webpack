@@ -17,7 +17,7 @@ class Todo {
 
   static remove(id) {
     todos = todos.filter((todo) => Number(todo.id) !== +id);
-    return todos
+    return todos;
   }
 
   static saveTolocalStorage() {
