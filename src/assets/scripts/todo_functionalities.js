@@ -1,4 +1,5 @@
 import { completedTodo, updateIndex } from './completed_functionality.js';
+import { addTodo, removeTodo } from './crud_todo.js';
 import Todo, { todos } from './todo.js';
 import loadTodo from './todo_loader.js';
 
@@ -6,11 +7,16 @@ const form = document.querySelector('#form');
 const todolist = document.querySelector('.todolist');
 const popupMessage = document.querySelector('.popup_message');
 
-const addTodoHandler = (id, desc) => {
-  Todo.saveTolocalStorage();
-  loadTodo();
+const displaySuccessMessage = () => {
   popupMessage.classList.remove('hide');
   setTimeout(() => popupMessage.classList.add('hide'), 3000);
+};
+
+const addTodoHandler = (id, desc) => {
+  addTodo(id, desc);
+  Todo.saveTolocalStorage();
+  loadTodo();
+  displaySuccessMessage();
 };
 
 form.addEventListener('submit', (e) => {
@@ -32,7 +38,7 @@ const editTodo = (target) => {
 };
 
 const removeTodoHandler = (id) => {
-  Todo.remove(id);
+  removeTodo(id);
   Todo.saveTolocalStorage();
   loadTodo();
   updateIndex();
