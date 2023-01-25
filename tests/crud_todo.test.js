@@ -1,7 +1,7 @@
 import { addTodo, removeTodo } from '../src/assets/scripts/crud_todo.js';
 import { todos } from '../src/assets/scripts/todo.js';
 
-describe('when adding a todo', () => {
+describe('todo', () => {
   const { length: id } = todos;
   const desc = 'A new todo';
 
