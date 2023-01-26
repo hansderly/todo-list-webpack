@@ -5,24 +5,24 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 AWESOME BOOK ](#-awesome-book-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Getting Started ](#-getting-started-)
+- [📖 AWESOME BOOK](#-awesome-book-)
+  - [🛠 Built With](#-built-with-)
+    - [Tech Stack](#tech-stack-)
+    - [Key Features](#key-features-)
+  - [🚀 Live Demo](#-live-demo-)
+  - [💻 Getting Started](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
-  - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+  - [👥 Authors](#-authors-)
+  - [🔭 Future Features](#-future-features-)
+  - [🤝 Contributing](#-contributing-)
+  - [⭐️ Show your support](#️-show-your-support-)
+  - [🙏 Acknowledgments](#-acknowledgments-)
+  - [📝 License](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -52,8 +52,8 @@
 
 > Here are some key features of the application :
 
--   **Add Todo**
--   **Remove Todo**
+- **Add Todo**
+- **Remove Todo**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +88,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone git@github.com:hansderly/todo-list-webpack.git
 ```
-
 -
 
 ### Install
@@ -162,9 +161,9 @@ Example:
 
 👤 **Hans-Derly Rameau**
 
--   GitHub: [@hansderly](https://github.com/hansderly)
--   Twitter: [@\_hansderly](https://twitter.com/_hansderly)
--   LinkedIn: [ansderly-rameau](https://linkedin.com/in/ansderly-rameau/)
+- GitHub: [@hansderly](https://github.com/hansderly)
+- Twitter: [@\_hansderly](https://twitter.com/_hansderly)
+- LinkedIn: [ansderly-rameau](https://linkedin.com/in/ansderly-rameau/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,7 +171,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--   Add add and remove functionality
+- Add add and remove functionality
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
