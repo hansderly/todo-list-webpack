@@ -26,7 +26,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 AWESOME BOOK <a name="about-project"></a>
+# 📖 Todo-list <a name="about-project"></a>
 
 > " A simple TodoLis built using ES6 and Webpack!
 
