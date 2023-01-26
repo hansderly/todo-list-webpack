@@ -32,4 +32,20 @@ describe('todo', () => {
 
     expect(newDesc).toBe(todos[id].description);
   });
+  it('should mark the todo as completed', () => {
+    addTodo(id, desc);
+    completedTodo(id);
+    const { completed } = todos[id];
+    expect(completed).toBeTruthy();
+  });
+  it('should clear all completed todos', () => {
+    const { length: idOne } = todos;
+    addTodo(idOne, desc);
+    const { length: idTwo } = todos;
+    addTodo(idTwo, desc);
+
+    completedTodo(0);
+
+    expect(clearAllTodo().length).toBe(todos.length);
+  });
 });
