@@ -11,5 +11,9 @@ const removeTodo = (id) => Todo.remove(id);
 
 const updateTodo = () => {};
 
-// eslint-disable-next-line object-curly-newline
-export { addTodo, editTodo, removeTodo, updateTodo };
+export {
+  addTodo,
+  editTodo,
+  removeTodo,
+  updateTodo,
+};
