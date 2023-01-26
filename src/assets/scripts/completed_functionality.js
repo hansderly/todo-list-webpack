@@ -1,3 +1,4 @@
+import { clearAllTodo, completedTodo } from './crud_todo.js';
 import Todo, { todos } from './todo.js';
 import loadTodo from './todo_loader.js';
 
@@ -8,23 +9,21 @@ const updateIndex = () => {
   Todo.saveTolocalStorage();
 };
 
-const completedTodo = (target) => {
+const completedTodoHandler = (target) => {
   const { id } = target.parentElement.parentElement;
-  todos.forEach((todo) => {
-    if (todo.id === +id) todo.completed = !todo.completed;
-  });
+  completedTodo(id);
   Todo.saveTolocalStorage();
   loadTodo();
 };
 
-const clearAllTodo = () => {
-  const newTodos = todos.filter((todo) => todo.completed !== true);
+const clearAllTodoHandler = () => {
+  const newTodos = clearAllTodo();
   Todo.setTolocalStorage(newTodos);
   Todo.saveTolocalStorage();
   updateIndex();
   loadTodo();
 };
 
-buttonClear.addEventListener('click', () => clearAllTodo());
+buttonClear.addEventListener('click', () => clearAllTodoHandler());
 
-export { completedTodo, clearAllTodo, updateIndex };
+export { completedTodoHandler, clearAllTodoHandler, updateIndex };
