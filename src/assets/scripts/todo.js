@@ -12,11 +12,12 @@ class Todo {
   add() {
     const { id, description, completed } = this;
     const newTodo = { id, description, completed };
-    todos.push(newTodo);
+    return todos.push(newTodo);
   }
 
   static remove(id) {
     todos = todos.filter((todo) => Number(todo.id) !== +id);
+    return todos;
   }
 
   static saveTolocalStorage() {
