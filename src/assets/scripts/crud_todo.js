@@ -6,17 +6,18 @@ const addTodo = (id, desc) => {
 };
 
 const editTodo = (id, newDesc) => {
-  const result = todos.forEach((todo) => {
+  todos.forEach((todo) => {
     if (Number(todo.id) === +id) todo.description = newDesc;
   });
-  return result;
+
+  return { id, newDesc };
 };
 
 const completedTodo = (id) => {
   todos.forEach((todo) => {
     if (todo.id === +id) todo.completed = !todo.completed;
   });
-}
+};
 
 const clearAllTodo = () => todos.filter((todo) => todo.completed !== true);
 
