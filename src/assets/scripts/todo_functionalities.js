@@ -1,5 +1,5 @@
-import { completedTodo, updateIndex } from './completed_functionality.js';
-import { addTodo, removeTodo } from './crud_todo.js';
+import { completedTodoHandler, updateIndex } from './completed_functionality.js';
+import { addTodo, editTodo, removeTodo } from './crud_todo.js';
 import Todo, { todos } from './todo.js';
 import loadTodo from './todo_loader.js';
 
@@ -27,12 +27,12 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
-const editTodo = (target) => {
+const editTodoHandler = (target) => {
   const { id } = target.parentElement.parentElement;
   target.addEventListener('focusout', () => {
     target.parentElement.parentElement.classList.remove('yellow_color');
     const newDesc = target.value;
-    todos.forEach((todo) => { if (Number(todo.id) === +id) todo.description = newDesc; });
+    editTodo(id, newDesc);
     Todo.saveTolocalStorage();
   });
 };
@@ -47,7 +47,7 @@ const removeTodoHandler = (id) => {
 todolist.addEventListener('click', (e) => {
   const { target } = e;
   if (target.type === 'text') {
-    editTodo(target);
+    editTodoHandler(target);
     target.parentElement.parentElement.classList.add('yellow_color');
   }
 
@@ -56,7 +56,7 @@ todolist.addEventListener('click', (e) => {
     removeTodoHandler(id);
   }
 
-  if (target.type === 'checkbox') completedTodo(target);
+  if (target.type === 'checkbox') completedTodoHandler(target);
 });
 
 export default todolist;
