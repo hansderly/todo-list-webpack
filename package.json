@@ -34,7 +34,7 @@
 		"jest-environment-jsdom": "^29.4.0",
 		"jest-localstorage-mock": "^2.4.26",
 		"style-loader": "^3.3.1",
-		"stylelint": "^13.13.1",
+		"stylelint": "^15.10.1",
 		"stylelint-config-standard": "^21.0.0",
 		"stylelint-csstree-validator": "^1.9.0",
 		"stylelint-scss": "^3.21.0",
